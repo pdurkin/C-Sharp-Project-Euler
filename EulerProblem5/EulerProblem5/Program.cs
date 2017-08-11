@@ -41,7 +41,7 @@ namespace EulerProblem5
             A brute-force approach:
             */
 
-            int number = 2520; //we know we can start here from the problem
+            int number = 2520; //we know we can start here from the prompt.
             Program helper = new Program();
 
             while (true)
@@ -55,6 +55,7 @@ namespace EulerProblem5
 
             Console.WriteLine("Here is the smallest number that is evenly divisible by 1-20: {0}", number);
             Console.ReadLine();
+            //prints out 232792560 as expected.
         }
 
         //divisor test for 1-20
@@ -64,7 +65,7 @@ namespace EulerProblem5
             {
                 if (num % i != 0)
                 {
-                    //our number is not divisible by a certain number, return false
+                    //our number is not divisible by a certain divisor, return false
                     return false;
                 }
             }
