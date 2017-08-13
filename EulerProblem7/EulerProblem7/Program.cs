@@ -19,16 +19,16 @@ namespace EulerProblem7
         */
         static void Main(string[] args)
         {
+            
             //Brute Force approach...
             //we'll start with 2 already counted and skip checking the even numbers
             int primeCounter = 1;
             int latestPrime = 2;
             int i = 3;
-            Program helper = new Program();
-
+            
             while (primeCounter != 10001)
             {
-                if (helper.isPrime(i))
+                if (isPrime(i))
                 {
                     primeCounter++;
                     latestPrime = i;
@@ -38,9 +38,11 @@ namespace EulerProblem7
 
             Console.WriteLine("The 10001st prime is: {0}", latestPrime);
             Console.ReadLine();
+            
+
         }
 
-        bool isPrime(int x)
+        static bool isPrime(int x)
         {
             //we know the greatest factor of x must be no greater than its sqrt
             int i = (int)Math.Sqrt(x);
